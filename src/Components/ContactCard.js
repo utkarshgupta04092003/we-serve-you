@@ -6,7 +6,7 @@ const ContactCard=(props)=>{// destructuring
           
         <div className="item">
         <div className="content">
-            <img  src={user} alt='user'/>
+            <img  style={{width:"100px"}} src={user} alt='user'/>
             <div className="header">{name}</div>
             <div>{email}</div>
         </div>

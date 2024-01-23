@@ -11,6 +11,7 @@ class  AddContact extends React.Component{
             alert("All Fileds are Mandatory");
             return;
         }
+        console.log(this.state)
         this.props.addContactHandler(this.state)
         this.setState({name:"",email:""})
 
