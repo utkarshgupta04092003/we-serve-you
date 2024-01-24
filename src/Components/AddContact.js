@@ -13,7 +13,7 @@ class  AddContact extends React.Component{
         }
         console.log(this.state)
         this.props.addContactHandler(this.state)
-        this.setState({name:"",email:""})
+        this.setState({name:"",email:""})//delete the name and email contents
 
     }
     render(){//the new state after null state will be this state which will get rendered on the App component
@@ -23,7 +23,7 @@ class  AddContact extends React.Component{
                 <form className='ui form' onSubmit={this.add}>
                     <div className='field'>
                         <label>Name</label>
-                        <input type='text' placeholder='name' name='name'  onChange={(e)=>{this.setState({name:e.target.value})}} value={this.state.name} />
+                        <input type='text' placeholder='name' name='name'   value={this.state.name} onChange={(e)=>{this.setState({name:e.target.value})}} />
                     </div>
                     <div className='field'>
                         <label>Email</label>
