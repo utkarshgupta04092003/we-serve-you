@@ -1,7 +1,7 @@
 import React from 'react';
 import user from '../Images/user.jpeg';
 const ContactCard=(props)=>{// destructuring
-    const {id,name,email}=props.contact;
+    const {name,email}=props.contact;
     return(
           
         <div className="item">

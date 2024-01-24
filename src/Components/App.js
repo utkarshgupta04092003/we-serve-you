@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { uuid } from "uuidv4";
 import AddContact from './AddContact';
 import './App.css';
 import ContactList from './ContactList';
@@ -9,7 +10,7 @@ function App() {
   const [Contacts,setContacts]=useState([])//variable on component whose state is changed -"Contacts"
 const addContactHandler=(contact)=>{
     console.log(contact)
-    setContacts([...Contacts,contact]);
+    setContacts([...Contacts,{id:uuid(),...Contacts}]);
   }
   useEffect(()=>{
     const retrieveContact=JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
